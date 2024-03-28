@@ -1,0 +1,636 @@
+﻿<Page x:Class="yz.gaming.accessoryapp.View.ControllerPage.KeyDescriptionPageView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:yz.gaming.accessoryapp.View.ControllerPage"
+      xmlns:controls="clr-namespace:yz.gaming.accessoryapp.Controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1200"
+      Title="KeyDescription">
+    <Page.Resources>
+        <ResourceDictionary Source="../../Resource/ComboxStyl.xaml" />
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="15*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0"/>
+            <Grid Grid.Column="1" HorizontalAlignment="Center">
+                <controls:ThirdTabControl x:Name="ThirdRadio"
+                                          LeftIconPath="pack://SiteOfOrigin:,,,/Resource/Image/Gamepad.png"
+                                          CenterIconPath="pack://SiteOfOrigin:,,,/Resource/Image/Keyboard.png"
+                                          RightIconPath="pack://SiteOfOrigin:,,,/Resource/Image/CombinationKey.png"
+                                          M1M2IconPath="pack://SiteOfOrigin:,,,/Resource/Image/Gamepad.png"
+                                          LeftText="{DynamicResource JoystickMode}"
+                                          CenterText="{DynamicResource MouKbdMode}"
+                                          RightText="{DynamicResource CombinationKey}"
+                                          M1M2Text="{DynamicResource M1AndM2}"
+                                          LeftElement=""
+                                          CenterElement=""
+                                          RightElement=""
+                                          M1M2Element=""
+                                          SelectElement="RightElement"/>
+            </Grid>
+            <Grid Grid.Column="2"/>
+        </Grid>
+        <!--                     JoystickMode                     -->
+        <Grid Grid.Row="1" x:Name="JoystickMode" Visibility="Hidden" Tag="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="8*" />
+                        <RowDefinition Height="3*" />
+                    </Grid.RowDefinitions>
+                    <Viewbox Grid.Row="0" />
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Viewbox HorizontalAlignment="Right" Grid.Row="0" >
+                            <controls:RightIconControl Text="{DynamicResource SelectKey}"
+                                                       IconPath="pack://SiteOfOrigin:,,,/Resource/Image/SelectKey.png" />
+                        </Viewbox>
+                        <Viewbox Grid.Row="1"/>
+                        <Viewbox HorizontalAlignment="Right" Grid.Row="2" >
+                            <controls:RightIconControl Text="{DynamicResource LinearTrigger}"
+                                                       IconPath="pack://SiteOfOrigin:,,,/Resource/Image/LeftLinearTrigger.png" />
+                        </Viewbox>
+                        <Viewbox Grid.Row="3"/>
+                        <Viewbox HorizontalAlignment="Right" Grid.Row="4" >
+                            <controls:RightIconControl Text="{DynamicResource Shoulderkey}"
+                                                       IconPath="pack://SiteOfOrigin:,,,/Resource/Image/LeftShoulderKey.png" />
+                        </Viewbox>
+                        <Viewbox Grid.Row="5"/>
+                        <Viewbox HorizontalAlignment="Right" Grid.Row="6" >
+                            <controls:RightIconControl Text="{DynamicResource StandardJoystick}"
+                                                       IconPath="pack://SiteOfOrigin:,,,/Resource/Image/LeftJoystick.png" />
+                        </Viewbox>
+                        <Viewbox Grid.Row="7"/>
+                        <Viewbox HorizontalAlignment="Right" Grid.Row="8" >
+                            <controls:RightIconControl Text="{DynamicResource StandardDpad}"
+                                                       IconPath="pack://SiteOfOrigin:,,,/Resource/Image/Dpad.png" />
+                        </Viewbox>
+                    </Grid>
+                    <Viewbox Grid.Row="2" />
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Image Source="pack://SiteOfOrigin:,,,/Resource/Image/Device_ARP31B.png" />
+                </Grid>
+                <Grid Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="8*" />
+                        <RowDefinition Height="3*" />
+                    </Grid.RowDefinitions>
+                    <Viewbox Grid.Row="0" />
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Viewbox HorizontalAlignment="Left" Grid.Row="0" >
+                            <controls:LeftIconControl Text="{DynamicResource StartKey}"
+                                                       IconPath="pack://SiteOfOrigin:,,,/Resource/Image/StartKey.png" />
+                        </Viewbox>
+                        <Viewbox Grid.Row="1"/>
+                        <Viewbox HorizontalAlignment="Left" Grid.Row="2" >
+                            <controls:LeftIconControl Text="{DynamicResource LinearTrigger}"
+                                                       IconPath="pack://SiteOfOrigin:,,,/Resource/Image/RightLinearTrigger.png" />
+                        </Viewbox>
+                        <Viewbox Grid.Row="3"/>
+                        <Viewbox HorizontalAlignment="Left" Grid.Row="4" >
+                            <controls:LeftIconControl Text="{DynamicResource Shoulderkey}"
+                                                       IconPath="pack://SiteOfOrigin:,,,/Resource/Image/RightShoulderKey.png" />
+                        </Viewbox>
+                        <Viewbox Grid.Row="5"/>
+                        <Viewbox HorizontalAlignment="Left" Grid.Row="6" >
+                            <controls:LeftIconControl Text="{DynamicResource StandABXYKey}"
+                                                       IconPath="pack://SiteOfOrigin:,,,/Resource/Image/StandABXYKey.png" />
+                        </Viewbox>
+                        <Viewbox Grid.Row="7"/>
+                        <Viewbox HorizontalAlignment="Left" Grid.Row="8" >
+                            <controls:LeftIconControl Text="{DynamicResource StandardJoystick}"
+                                                       IconPath="pack://SiteOfOrigin:,,,/Resource/Image/RightJoystick.png" />
+                        </Viewbox>
+                    </Grid>
+                    <Viewbox Grid.Row="2" />
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Viewbox Grid.Column="0"/>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Viewbox Grid.Column="0"/>
+                    <Viewbox Grid.Column="1" VerticalAlignment="Top">
+                        <controls:TopIconControl Text="{DynamicResource Power}"
+                                                 Description="{DynamicResource PowerDescription}"
+                                                 IconPath="pack://SiteOfOrigin:,,,/Resource/Image/PowerKey.png" />
+                    </Viewbox>
+                    <Viewbox Grid.Column="2"/>
+                    <Viewbox Grid.Column="3" VerticalAlignment="Top">
+                        <controls:TopIconControl Text="{DynamicResource VolumeUp}"
+                                                 Description="{DynamicResource VolumeUpDescription}"
+                                                 IconPath="pack://SiteOfOrigin:,,,/Resource/Image/VolumeUp.png" />
+                    </Viewbox>
+                    <Viewbox Grid.Column="4"/>
+                    <Viewbox Grid.Column="5" VerticalAlignment="Top">
+                        <controls:TopIconControl Text="{DynamicResource VolumeDown}"
+                                                 Description="{DynamicResource VolumeDownDescription}"
+                                                 IconPath="pack://SiteOfOrigin:,,,/Resource/Image/VolumeDown.png" />
+                    </Viewbox>
+                    <Viewbox Grid.Column="6"/>
+                    <Viewbox Grid.Column="7" VerticalAlignment="Top">
+                        <controls:TopIconControl Text="{DynamicResource PowerSaving}"
+                                                 Description="{DynamicResource PowerSavingDescription}"
+                                                 IconPath="pack://SiteOfOrigin:,,,/Resource/Image/PowerSaving_ARP31B.png" />
+                    </Viewbox>
+                    <Viewbox Grid.Column="8"/>
+                    <Viewbox Grid.Column="9" VerticalAlignment="Top">
+                        <controls:TopIconControl Text="{DynamicResource HomeKey}"
+                                                 Description="{DynamicResource HomeDescription}"
+                                                 IconPath="pack://SiteOfOrigin:,,,/Resource/Image/HomeKey.png" />
+                    </Viewbox>
+                    <Viewbox Grid.Column="10"/>
+                    <!--<Viewbox Grid.Column="11" VerticalAlignment="Top">
+                        <controls:TopIconControl Text="{DynamicResource MouKbdKey}"
+                                                 Description="{DynamicResource MouKbdKeyDescription}"
+                                                 IconPath="pack://SiteOfOrigin:,,,/Resource/Image/MouKbd.png" />
+                    </Viewbox>-->
+                    <Viewbox Grid.Column="12"/>
+                    <Viewbox Grid.Column="11" VerticalAlignment="Top">
+                        <controls:TopIconControl Text="{DynamicResource ShortcutKey}"
+                                                 Description="{DynamicResource ShortcutKeyDescription}"
+                                                 IconPath="pack://SiteOfOrigin:,,,/Resource/Image/ShortcutKey.png" />
+                    </Viewbox>
+                    <Viewbox Grid.Column="14"/>
+                </Grid>
+                <Viewbox Grid.Column="2"/>
+            </Grid>
+        </Grid>
+        <!--             MouKbdMode          -->
+        <Grid Grid.Row="1" x:Name="MouKbdMode" Visibility="Hidden"  Tag="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="24*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="24*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="24*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="24*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="24*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="24*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="24*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="24*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="190*" />
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Row="0" />
+                <Viewbox Grid.Row="1" HorizontalAlignment="Right">
+                    <controls:RightIconControl IconPath="pack://SiteOfOrigin:,,,/Resource/Image/SelectKey.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="3" HorizontalAlignment="Right">
+                    <controls:RightIconControl Text="{DynamicResource ControlKey}"
+                                               IconPath="pack://SiteOfOrigin:,,,/Resource/Image/LeftLinearTrigger.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="5" HorizontalAlignment="Right">
+                    <controls:RightIconControl Text="{DynamicResource RightButton}"
+                                               IconPath="pack://SiteOfOrigin:,,,/Resource/Image/LeftShoulderKey.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="7" HorizontalAlignment="Right">
+                    <controls:RightIconControl Text="{DynamicResource UpLeftDownRight}"
+                                               IconPath="pack://SiteOfOrigin:,,,/Resource/Image/LeftJoystick.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="9" HorizontalAlignment="Right">
+                    <controls:RightIconControl IconPath="pack://SiteOfOrigin:,,,/Resource/Image/Dpad.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="11" HorizontalAlignment="Right">
+                    <controls:RightIconControl Text="{DynamicResource Up}"
+                                               IconPath="pack://SiteOfOrigin:,,,/Resource/Image/UpKey.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="13" HorizontalAlignment="Right">
+                    <controls:RightIconControl Text="{DynamicResource Down}"
+                                               IconPath="pack://SiteOfOrigin:,,,/Resource/Image/DownKey.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="15" HorizontalAlignment="Right">
+                    <controls:RightIconControl Text="{DynamicResource Left}"
+                                               IconPath="pack://SiteOfOrigin:,,,/Resource/Image/LeftKey.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="17" HorizontalAlignment="Right">
+                    <controls:RightIconControl Text="{DynamicResource Right}"
+                                               IconPath="pack://SiteOfOrigin:,,,/Resource/Image/RightKey.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="18" />
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*" />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Image Source="pack://SiteOfOrigin:,,,/Resource/Image/Device_ARP31B.png" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Viewbox Grid.Column="0"/>
+                    <Viewbox Grid.Column="1" VerticalAlignment="Top">
+                        <controls:TopIconControl Text="{DynamicResource Power}"
+                                             Description="{DynamicResource PowerDescription}"
+                                             IconPath="pack://SiteOfOrigin:,,,/Resource/Image/PowerKey.png" />
+                    </Viewbox>
+                    <Viewbox Grid.Column="2"/>
+                    <Viewbox Grid.Column="3" VerticalAlignment="Top">
+                        <controls:TopIconControl Text="{DynamicResource VolumeUp}"
+                                             Description="{DynamicResource VolumeUpDescription}"
+                                             IconPath="pack://SiteOfOrigin:,,,/Resource/Image/VolumeUp.png" />
+                    </Viewbox>
+                    <Viewbox Grid.Column="4"/>
+                    <Viewbox Grid.Column="5" VerticalAlignment="Top">
+                        <controls:TopIconControl Text="{DynamicResource VolumeDown}"
+                                             Description="{DynamicResource VolumeDownDescription}"
+                                             IconPath="pack://SiteOfOrigin:,,,/Resource/Image/VolumeDown.png" />
+                    </Viewbox>
+                    <Viewbox Grid.Column="6"/>
+                    <Viewbox Grid.Column="7" VerticalAlignment="Top">
+                        <controls:TopIconControl Text="{DynamicResource PowerSaving}"
+                                             Description="{DynamicResource PowerSavingDescription}"
+                                             IconPath="pack://SiteOfOrigin:,,,/Resource/Image/PowerSaving_ARP31B.png" />
+                    </Viewbox>
+                    <Viewbox Grid.Column="8"/>
+                    <Viewbox Grid.Column="9" VerticalAlignment="Top">
+                        <controls:TopIconControl Text="{DynamicResource HomeKey}"
+                                             Description="{DynamicResource HomeDescription}"
+                                             IconPath="pack://SiteOfOrigin:,,,/Resource/Image/HomeKey.png" />
+                    </Viewbox>
+                    <Viewbox Grid.Column="10"/>
+                    <!--<Viewbox Grid.Column="11" VerticalAlignment="Top">
+                        <controls:TopIconControl Text="{DynamicResource MouKbdKey}"
+                                             Description="{DynamicResource MouKbdKeyDescription}"
+                                             IconPath="pack://SiteOfOrigin:,,,/Resource/Image/MouKbd.png" />
+                    </Viewbox>-->
+                    <Viewbox Grid.Column="12"/>
+                    <Viewbox Grid.Column="11" VerticalAlignment="Top">
+                        <controls:TopIconControl Text="{DynamicResource ShortcutKey}"
+                                             Description="{DynamicResource ShortcutKeyDescription}"
+                                             IconPath="pack://SiteOfOrigin:,,,/Resource/Image/ShortcutKey.png" />
+                    </Viewbox>
+                    <Viewbox Grid.Column="14"/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="24*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="24*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="24*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="24*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="24*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="24*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="24*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="24*" />
+                    <RowDefinition Height="32*" />
+                    <RowDefinition Height="190*" />
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Row="0" />
+                <Viewbox Grid.Row="1" HorizontalAlignment="Left">
+                    <controls:LeftIconControl IconPath="pack://SiteOfOrigin:,,,/Resource/Image/StartKey.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="3" HorizontalAlignment="Left">
+                    <controls:LeftIconControl Text="{DynamicResource AltKey}"
+                                              IconPath="pack://SiteOfOrigin:,,,/Resource/Image/RightLinearTrigger.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="5" HorizontalAlignment="Left">
+                    <controls:LeftIconControl Text="{DynamicResource LeftButton}"
+                                              IconPath="pack://SiteOfOrigin:,,,/Resource/Image/RightShoulderKey.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="7" HorizontalAlignment="Left">
+                    <controls:LeftIconControl Text="{DynamicResource Enter}"
+                                              IconPath="pack://SiteOfOrigin:,,,/Resource/Image/AKey.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="9" HorizontalAlignment="Left">
+                    <controls:LeftIconControl Text="{DynamicResource EscKey}"
+                                              IconPath="pack://SiteOfOrigin:,,,/Resource/Image/BKey.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="11" HorizontalAlignment="Left">
+                    <controls:LeftIconControl Text="{DynamicResource SpaceKey}"
+                                              IconPath="pack://SiteOfOrigin:,,,/Resource/Image/XKey.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="13" HorizontalAlignment="Left">
+                    <controls:LeftIconControl Text="{DynamicResource TabKey}"
+                                              IconPath="pack://SiteOfOrigin:,,,/Resource/Image/YKey.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="15" HorizontalAlignment="Left">
+                    <controls:LeftIconControl Text="{DynamicResource Mouse}"
+                                              IconPath="pack://SiteOfOrigin:,,,/Resource/Image/RightJoystick.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="17" HorizontalAlignment="Left">
+                    <controls:LeftIconControl Text="{DynamicResource LeftButton}"
+                                              IconPath="pack://SiteOfOrigin:,,,/Resource/Image/RightMiddleKey.png" />
+                </Viewbox>
+                <Viewbox Grid.Row="18" />
+            </Grid>
+        </Grid>
+        <!--                 CombinationKey               -->
+        <Grid Grid.Row="1" x:Name="CombinationKey" Visibility="Hidden"  Tag="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Image Source="pack://SiteOfOrigin:,,,/Resource/Image/Device2_ARP31B.png" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="15*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="30*"/>
+                    </Grid.ColumnDefinitions>
+                    <Viewbox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left">
+                        <controls:ComboIconControl Text="{DynamicResource ScreenCapture}"
+                                                   LeftIconPath="pack://SiteOfOrigin:,,,/Resource/Image/HomeKey.png"
+                                                   RightIconPath="pack://SiteOfOrigin:,,,/Resource/Image/VolumeUp.png"/>
+                    </Viewbox>
+                    <Viewbox Grid.Row="1" Grid.Column="3" HorizontalAlignment="Left">
+                        <controls:ComboIconControl Text="{DynamicResource AmbientLightSettings}"
+                                                   LeftIconPath="pack://SiteOfOrigin:,,,/Resource/Image/SelectKey.png"
+                                                   RightIconPath="pack://SiteOfOrigin:,,,/Resource/Image/StartKey.png"/>
+                    </Viewbox>
+                    <Viewbox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left">
+                        <controls:ComboIconControl Text="{DynamicResource OpenTaskManager}"
+                                                   LeftIconPath="pack://SiteOfOrigin:,,,/Resource/Image/HomeKey.png"
+                                                   RightIconPath="pack://SiteOfOrigin:,,,/Resource/Image/VolumeDown.png"/>
+                    </Viewbox>
+                    <Viewbox Grid.Row="3" Grid.Column="3" HorizontalAlignment="Left">
+                        <controls:ComboIconControl Text="{DynamicResource RunMenu}"
+                                                   LeftIconPath="pack://SiteOfOrigin:,,,/Resource/Image/HomeKey.png"
+                                                   RightIconPath="pack://SiteOfOrigin:,,,/Resource/Image/PowerSaving_ARP31B.png"/>
+                    </Viewbox>
+                </Grid>
+            </Grid>
+        </Grid>
+        <!--                 M1AndM2               -->
+        <Grid Grid.Row="1" x:Name="M1AndM2" Visibility="Hidden"  Tag="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Image Source="pack://SiteOfOrigin:,,,/Resource/Image/DeviceBack_ARP31B.png" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="12*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Row="1" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="20*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="12*"/>
+                            <ColumnDefinition Width="12*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="20*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="12*"/>
+                            <ColumnDefinition Width="12*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="20*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="12*"/>
+                            <ColumnDefinition Width="12*"/>
+                            <ColumnDefinition Width="30*"/>
+                        </Grid.ColumnDefinitions>
+                        <Viewbox Grid.Column="0" >
+                            <TextBlock Foreground="White" Text="{DynamicResource M1Key}" />
+                        </Viewbox>
+                        <controls:SelectableTextBlock x:Name="M1Key1" Grid.Column="1" Index="1" Text="NC" OnSelected="OnKeyItemSelected"/>
+                        <Viewbox Grid.Column="2" >
+                            <TextBlock Foreground="White" Text="+" />
+                        </Viewbox>
+                        <Grid Grid.Column="3" >
+                            <controls:SelectableComboBox x:Name="M1Delay1" Index="2" />
+                        </Grid>
+                        <Viewbox Grid.Column="4" Margin="2,0,0,0">
+                            <TextBlock Foreground="White" Text="ms" />
+                        </Viewbox>
+                        <Viewbox Grid.Column="5" >
+                            <TextBlock Foreground="White" Text="+" />
+                        </Viewbox>
+                        <controls:SelectableTextBlock x:Name="M1Key2" Grid.Column="6" Index="3" Text="NC" OnSelected="OnKeyItemSelected"/>
+                        <Viewbox Grid.Column="7" >
+                            <TextBlock Foreground="White" Text="+" />
+                        </Viewbox>
+                        <Grid Grid.Column="8" >
+                            <controls:SelectableComboBox x:Name="M1Delay2" Index="4" />
+                        </Grid>
+                        <Viewbox Grid.Column="9" Margin="2,0,0,0">
+                            <TextBlock Foreground="White" Text="ms" />
+                        </Viewbox>
+                        <Viewbox Grid.Column="10" >
+                            <TextBlock Foreground="White" Text="+" />
+                        </Viewbox>
+                        <controls:SelectableTextBlock x:Name="M1Key3" Grid.Column="11" Index="5" Text="NC" OnSelected="OnKeyItemSelected"/>
+                        <Viewbox Grid.Column="12" >
+                            <TextBlock Foreground="White" Text="+" />
+                        </Viewbox>
+                        <Grid Grid.Column="13" >
+                            <controls:SelectableComboBox x:Name="M1Delay3" Index="6" />
+                        </Grid>
+                        <Viewbox Grid.Column="14" Margin="2,0,0,0">
+                            <TextBlock Foreground="White" Text="ms" />
+                        </Viewbox>
+                        <Viewbox Grid.Column="15" >
+                            <TextBlock Foreground="White" Text="+" />
+                        </Viewbox>
+                        <controls:SelectableTextBlock x:Name="M1Key4" Grid.Column="16" Index="7" Text="NC" OnSelected="OnKeyItemSelected"/>
+                    </Grid>
+                    <Grid Grid.Row="3" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="20*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="12*"/>
+                            <ColumnDefinition Width="12*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="20*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="12*"/>
+                            <ColumnDefinition Width="12*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="20*"/>
+                            <ColumnDefinition Width="30*"/>
+                            <ColumnDefinition Width="12*"/>
+                            <ColumnDefinition Width="12*"/>
+                            <ColumnDefinition Width="30*"/>
+                        </Grid.ColumnDefinitions>
+                        <Viewbox Grid.Column="0" >
+                            <TextBlock Foreground="White" Text="{DynamicResource M2Key}" />
+                        </Viewbox>
+                        <controls:SelectableTextBlock x:Name="M2Key1" Grid.Column="1" Index="8" Text="NC" OnSelected="OnKeyItemSelected"/>
+                        <Viewbox Grid.Column="2" >
+                            <TextBlock Foreground="White" Text="+" />
+                        </Viewbox>
+                        <Grid Grid.Column="3" >
+                            <controls:SelectableComboBox x:Name="M2Delay1" Index="9" />
+                        </Grid>
+                        <Viewbox Grid.Column="4" Margin="2,0,0,0">
+                            <TextBlock Foreground="White" Text="ms" />
+                        </Viewbox>
+                        <Viewbox Grid.Column="5" >
+                            <TextBlock Foreground="White" Text="+" />
+                        </Viewbox>
+                        <controls:SelectableTextBlock x:Name="M2Key2" Grid.Column="6" Index="10" Text="NC" OnSelected="OnKeyItemSelected"/>
+                        <Viewbox Grid.Column="7" >
+                            <TextBlock Foreground="White" Text="+" />
+                        </Viewbox>
+                        <Grid Grid.Column="8" >
+                            <controls:SelectableComboBox x:Name="M2Delay2" Index="11" />
+                        </Grid>
+                        <Viewbox Grid.Column="9" Margin="2,0,0,0">
+                            <TextBlock Foreground="White" Text="ms" />
+                        </Viewbox>
+                        <Viewbox Grid.Column="10" >
+                            <TextBlock Foreground="White" Text="+" />
+                        </Viewbox>
+                        <controls:SelectableTextBlock x:Name="M2Key3" Grid.Column="11" Index="12" Text="NC" OnSelected="OnKeyItemSelected"/>
+                        <Viewbox Grid.Column="12" >
+                            <TextBlock Foreground="White" Text="+" />
+                        </Viewbox>
+                        <Grid Grid.Column="13" >
+                            <controls:SelectableComboBox x:Name="M2Delay3" Index="13" />
+                        </Grid>
+                        <Viewbox Grid.Column="14" Margin="2,0,0,0">
+                            <TextBlock Foreground="White" Text="ms" />
+                        </Viewbox>
+                        <Viewbox Grid.Column="15" >
+                            <TextBlock Foreground="White" Text="+" />
+                        </Viewbox>
+                        <controls:SelectableTextBlock x:Name="M2Key4" Grid.Column="16" Index="14" Text="NC" OnSelected="OnKeyItemSelected"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Page>

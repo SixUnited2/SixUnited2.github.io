@@ -1,0 +1,187 @@
+﻿<Page x:Class="yz.gaming.accessoryapp.View.Main.NewHomePageView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:yz.gaming.accessoryapp.View.Main"
+      xmlns:control="clr-namespace:yz.gaming.accessoryapp.Controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="NewHomePageView">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <!--<RowDefinition Height="30*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="30*"/>-->
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="155*" />
+                <ColumnDefinition Width="20*" />
+                <ColumnDefinition Width="60*" />
+                <!--<ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="20*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="20*" />
+                <ColumnDefinition Width="10*" />-->
+            </Grid.ColumnDefinitions>
+            <control:SimpleButtonControl x:Name="GamePlatformButton"
+                                         Grid.Column="1"
+                                         Index="0"
+                                         Text="{DynamicResource GamePlatform}" />
+            <!--<control:SimpleButtonControl x:Name="GamePlatformAdd"
+                                         Grid.Column="3"
+                                         Index="0"
+                                         Text="{DynamicResource GamePlatformAdd}" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="68" />
+            <control:SimpleButtonControl x:Name="GamePlatformDel"
+                                         Grid.Column="5"
+                                         Index="0"
+                                         OnClick="GamePlatformDel_OnClick"  
+                                         Text="{DynamicResource GamePlatformDel}" />-->
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="35*" />
+                <ColumnDefinition Width="498*" />
+                <ColumnDefinition Width="18*"/>
+                <ColumnDefinition Width="9*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="185*"/>
+                <ColumnDefinition Width="35*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <Grid x:Name="PanelGrid"
+                  Grid.Row="1" Grid.ColumnSpan="5" Grid.Column="1">
+                <WrapPanel x:Name="panel"
+                           Margin="0"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top"
+                           Orientation="Horizontal"/>
+            </Grid>
+        </Grid>
+        <!--<Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*" />
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="10*" />
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Column="1">
+                <control:DynamicButtonControlHV x:Name="xBox"
+                                                BorderCornerRadius="24"
+                                                Width="801" Height="580"
+                                                SelectedExpend="4"
+                                                Margin="0,0,0,0"
+                                                ImagePath="pack://SiteOfOrigin:,,,/Resource/Image/Button_bg_LH.png"
+                                                IconPath="pack://SiteOfOrigin:,,,/Resource/Image/XBox.png"
+                                                Index="1"
+                                                Tag="4"
+                                                Text="{DynamicResource XBox}"/>
+            </Viewbox>
+            <Viewbox Grid.Column="3">
+                <control:DynamicButtonControlHV x:Name="Steam"
+                                                BorderCornerRadius="24"
+                                                Width="801" Height="580"
+                                                SelectedExpend="4"
+                                                Margin="0,0,0,0"
+                                                ImagePath="pack://SiteOfOrigin:,,,/Resource/Image/Button_bg_LH.png"
+                                                IconPath="pack://SiteOfOrigin:,,,/Resource/Image/Steam.png"
+                                                Index="2"
+                                                Tag="0"
+                                                Text="{DynamicResource Steam}"/>
+            </Viewbox>
+            <Viewbox Grid.Column="5">
+                <control:DynamicButtonControlHV BorderCornerRadius="24"
+                                                Width="801" Height="580"
+                                                SelectedExpend="4"
+                                                Margin="0,0,0,0"
+                                                ImagePath="pack://SiteOfOrigin:,,,/Resource/Image/Button_bg_LH.png"
+                                                IconPath="{Binding PlatformItems[2].Icon, Mode=OneWay}"
+                                                Index="3"
+                                                Tag="{Binding PlatformItems[2].Platform, Mode=OneWay}"
+                                                Text="{Binding PlatformItems[2].Name, Mode=OneWay}"/>
+            </Viewbox>
+            <Viewbox Grid.Column="7">
+                <control:DynamicButtonControlHV BorderCornerRadius="24"
+                                                Width="801" Height="580"
+                                                SelectedExpend="4"
+                                                Margin="0,0,0,0"
+                                                ImagePath="pack://SiteOfOrigin:,,,/Resource/Image/Button_bg_LH.png"
+                                                IconPath="{Binding PlatformItems[3].Icon, Mode=OneWay}"
+                                                Index="4"
+                                                Tag="{Binding PlatformItems[3].Platform, Mode=OneWay}"
+                                                Text="{Binding PlatformItems[3].Name, Mode=OneWay}"/>
+            </Viewbox>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*" />
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="10*" />
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Column="1">
+                <control:DynamicButtonControlHV BorderCornerRadius="24"
+                                                Width="801" Height="580"
+                                                SelectedExpend="4"
+                                                Margin="0,0,0,0"
+                                                ImagePath="pack://SiteOfOrigin:,,,/Resource/Image/Button_bg_LH.png"
+                                                IconPath="{Binding PlatformItems[4].Icon, Mode=OneWay}"
+                                                Index="5"
+                                                Tag="{Binding PlatformItems[4].Platform, Mode=OneWay}"
+                                                Text="{Binding PlatformItems[4].Name, Mode=OneWay}"/>
+            </Viewbox>
+            <Viewbox Grid.Column="3">
+                <control:DynamicButtonControlHV BorderCornerRadius="24"
+                                                Width="801" Height="580"
+                                                SelectedExpend="4"
+                                                Margin="0,0,0,0"
+                                                ImagePath="pack://SiteOfOrigin:,,,/Resource/Image/Button_bg_LH.png"
+                                                IconPath="{Binding PlatformItems[5].Icon, Mode=OneWay}"
+                                                Index="6"
+                                                Tag="{Binding PlatformItems[5].Platform, Mode=OneWay}"
+                                                Text="{Binding PlatformItems[5].Name, Mode=OneWay}"/>
+            </Viewbox>
+            <Viewbox Grid.Column="5">
+                <control:DynamicButtonControlHV BorderCornerRadius="24"
+                                                Width="801" Height="580"
+                                                SelectedExpend="4"
+                                                Margin="0,0,0,0"
+                                                ImagePath="pack://SiteOfOrigin:,,,/Resource/Image/Button_bg_LH.png"
+                                                IconPath="{Binding PlatformItems[6].Icon, Mode=OneWay}"
+                                                Index="7"
+                                                Tag="{Binding PlatformItems[6].Platform, Mode=OneWay}"
+                                                Text="{Binding PlatformItems[6].Name, Mode=OneWay}"/>
+            </Viewbox>
+            <Viewbox Grid.Column="7">
+                <control:DynamicButtonControlHV BorderCornerRadius="24"
+                                                Width="801" Height="580"
+                                                SelectedExpend="4"
+                                                Margin="0,0,0,0"
+                                                ImagePath="pack://SiteOfOrigin:,,,/Resource/Image/Button_bg_LH.png"
+                                                IconPath="{Binding PlatformItems[7].Icon, Mode=OneWay}"
+                                                Index="8"
+                                                Tag="{Binding PlatformItems[7].Platform, Mode=OneWay}"
+                                                Text="{Binding PlatformItems[7].Name, Mode=OneWay}"/>
+            </Viewbox>
+        </Grid>-->
+    </Grid>
+</Page>

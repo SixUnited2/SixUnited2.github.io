@@ -1,0 +1,17 @@
+{
+  "version": "1.0.20.3",
+  "logs": "Log：\r\n2024-3-25 Fixed some bugs.",
+  "languages": [
+    {
+      "language": "zh-Hans",
+      "log": "日志：\r\n2024-3-25 修复一些BUG。"
+    },
+    {
+      "language": "en-US",
+      "log": "Log：\r\n2024-3-25 Fixed some bugs."
+    }
+  ],
+  "sha256": "b61a68b39d9f42806a67d09562d80c0df3a791c7bb64d1078f64658a3303fdbb",
+  //"url": "https://gitlab.com/yzapp/taishan/-/raw/main/update/GameAssistant_v1.0.20.3.zip?ref_type=heads&inline=false"
+  "url": "https://gitlab.com/sixunited1/GameAssistant/-/raw/tanjun/back_key/update/GameAssistant_v1.0.20.3.zip?ref_type=heads&inline=false"
+}

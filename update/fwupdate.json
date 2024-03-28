@@ -1,0 +1,16 @@
+{
+    "version": "1.24",
+    "logs": "",
+    "languages": [
+      {
+        "language": "zh-Hans",
+        "log": ""
+      },
+      {
+        "language": "en-US",
+        "log": ""
+      }
+    ],
+    "sha256": "f9fc73fbc7e4dedc6b9fec559e87837065c0bb491d290a7fa34ec7a47b5aeae3",
+    "url": "https://gitlab.com/yzapp/taishan/-/raw/main/update/UpdatePkg_V1.24.hjz?ref_type=heads&inline=false"
+  }

@@ -1,0 +1,299 @@
+﻿<Window x:Class="yz.gaming.accessoryapp.QuickMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:yz.gaming.accessoryapp"
+        xmlns:controls="clr-namespace:yz.gaming.accessoryapp.Controls"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        ShowInTaskbar="False"
+        mc:Ignorable="d"
+        Title="QuickMenu" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*" />
+            <ColumnDefinition Width="45*" />
+            <ColumnDefinition Width="8*" />
+        </Grid.ColumnDefinitions>
+        <Viewbox Grid.Column="0"/>
+        <Border Grid.Column="1" BorderBrush="#EEEEEE" BorderThickness="1" CornerRadius="20" Margin="10,0,10,0">
+            <Grid  Margin="0,0,0,0" x:Name="GridSetting">
+                <Border Background="#CC000000"
+                        CornerRadius="20">
+                    <Grid Margin="0,8,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20*"/>
+                            <RowDefinition Height="40*"/>
+                            <RowDefinition Height="30*"/>
+                            <RowDefinition Height="30*"/>
+                            <RowDefinition Height="30*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="8*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="2*"/>
+                            </Grid.RowDefinitions>
+                            <Viewbox Grid.Row="0" Margin="{Binding Path=TitleMargin, Mode=OneWay}"
+                                     HorizontalAlignment="Center">
+                                <TextBlock HorizontalAlignment="Left" 
+                                           VerticalAlignment="Center"
+                                           FontSize="24"
+                                           FontWeight="Black"
+                                           Foreground="White"
+                                           FontFamily="微软雅黑"
+                                           Text="{DynamicResource Performance}" />
+                            </Viewbox>
+                            <controls:QuickMenuRadio x:Name="PerformanceMode" Grid.Row="1"
+                                                           IconPath="pack://SiteOfOrigin:,,,/Resource/Image/PerformanceMode.png"
+                                                           LeftIconPath="pack://SiteOfOrigin:,,,/Resource/Image/Saving.png"
+                                                           RightIconPath="pack://SiteOfOrigin:,,,/Resource/Image/Power.png" 
+                                                           GroupName="Performance"
+                                                           Index="5"
+                                                           LeftText="{DynamicResource BalancePower}"
+                                                           RightText="{DynamicResource HighPower}"
+                                                           Text="{DynamicResource PerformanceMode}" />
+                            <controls:QuickMenuSlider x:Name="Custom" Grid.Row="2" Visibility="Collapsed"
+                                                      IconPath="pack://SiteOfOrigin:,,,/Resource/Image/CustomPower.png"
+                                                      MinValue="15"
+                                                      MaxValue="28"
+                                                      Index="7"
+                                                      Text="{DynamicResource Custom}"/>
+                            <controls:QuickMenuCheckBox x:Name="StatusMonitoring" Grid.Row="2" Visibility="Collapsed"
+                                                        IconPath="pack://SiteOfOrigin:,,,/Resource/Image/StatusMonitoring.png"
+                                                        Text="{DynamicResource StatusMonitoring}"
+                                                        Index="8"/>
+                            <Grid Grid.Row="2" Margin="0,0,0,0" Height="1" Background="#FF585858"/>
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="8*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="2*"/>
+                            </Grid.RowDefinitions>
+                            <Viewbox Grid.Row="0" Margin="{Binding Path=TitleMargin, Mode=OneWay}"
+                                     HorizontalAlignment="Center">
+                                <TextBlock HorizontalAlignment="Left" 
+                                           VerticalAlignment="Center"
+                                           FontSize="24"
+                                           FontWeight="Black"
+                                           Foreground="White"
+                                           FontFamily="微软雅黑"
+                                           Text="{DynamicResource Controller}" />
+                            </Viewbox>
+                            <controls:QuickMenuRadio x:Name="ControllerMode" Grid.Row="1"
+                                                     IconPath="pack://SiteOfOrigin:,,,/Resource/Image/ControllerMode.png"
+                                                     LeftIconPath="pack://SiteOfOrigin:,,,/Resource/Image/Gamepad_80.png"
+                                                     RightIconPath="pack://SiteOfOrigin:,,,/Resource/Image/Keyboard_80.png"
+                                                     GroupName="ControllerMode"
+                                                     Index="6"
+                                                     LeftText="{DynamicResource Gamepad}"
+                                                     RightText="{DynamicResource MouKbd}"
+                                                     Text="{DynamicResource Mode}" />
+                            <Grid Grid.Row="2" Grid.RowSpan="2">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*" />
+                                    <RowDefinition Height="1*" />
+                                </Grid.RowDefinitions>
+                                <!-- <controls:QuickMenuCheckBox x:Name="Shake" Grid.Row="0" Margin="0,0,16,0"
+                                                            IconPath="pack://SiteOfOrigin:,,,/Resource/Image/Shake.png"
+                                                            Index="6"
+                                                            Text="{DynamicResource Shake}"/> -->
+                                <controls:QuickMenuThirdRadio x:Name="Shake" Grid.Row="0"
+                                                              GroupName="Shake"
+                                                              Index="7"
+                                                              IconPath="pack://SiteOfOrigin:,,,/Resource/Image/Shake.png"
+                                                              LeftText="{DynamicResource Strong}"
+                                                              CenterText="{DynamicResource Weak}"
+                                                              RightText="{DynamicResource Off}"
+                                                              Text="{DynamicResource Shake}"/>
+                                <controls:QuickMenuCheckBox x:Name="RepeatMode" Grid.Row="1" Margin="0,0,16,0"
+                                                            IconPath="pack://SiteOfOrigin:,,,/Resource/Image/RepeatMode.png"
+                                                            Index="8"
+                                                            Text="{DynamicResource RepeatMode}"/>
+                            </Grid>
+                            <Grid Grid.Row="3" Visibility="Collapsed">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="7*" />
+                                    <ColumnDefinition Width="5*" />
+                                </Grid.ColumnDefinitions>
+                                <controls:QuickMenuCheckBox x:Name="GyroEmulate" Grid.Column="0" Margin="0,0,16,0"
+                                                            IconPath="pack://SiteOfOrigin:,,,/Resource/Image/Gyro.png"
+                                                            Index="12"
+                                                            Text="{DynamicResource GyroEmulate}"/>
+                                <controls:QuickMenuCheckBox x:Name="Light" Grid.Column="1"
+                                                            IconPath="pack://SiteOfOrigin:,,,/Resource/Image/Light.png"
+                                                            Index="13"
+                                                            Text="{DynamicResource Light}"/>
+
+                            </Grid>
+                            <Grid Grid.Row="4" Margin="0,0,0,0" Height="1" Background="#FF585858"/>
+                        </Grid>
+                        <Grid Grid.Row="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="8*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="2*"/>
+                            </Grid.RowDefinitions>
+                            <Viewbox Grid.Row="0" Margin="{Binding Path=TitleMargin, Mode=OneWay}"
+                                     HorizontalAlignment="Center">
+                                <TextBlock HorizontalAlignment="Left" 
+                                           VerticalAlignment="Center"
+                                           FontSize="24"
+                                           FontWeight="Black"
+                                           Foreground="White"
+                                           FontFamily="微软雅黑"
+                                           Text="{DynamicResource Display}" />
+                            </Viewbox>
+                            <controls:QuickMenuSlider x:Name="Brightness" Grid.Row="1"
+                                                      IconPath="pack://SiteOfOrigin:,,,/Resource/Image/Brightness.png"
+                                                      MinValue="0"
+                                                      MaxValue="100"
+                                                      Index="9"
+                                                      Text="{DynamicResource Brightness}"/>
+                            <controls:QuickMenuComboBox x:Name="Resolution" Grid.Row="2"
+                                                        IconPath="pack://SiteOfOrigin:,,,/Resource/Image/Resolution.png"
+                                                        Index="10"
+                                                        Text="{DynamicResource Resolution}"/>
+                            <controls:QuickMenuComboBox x:Name="RefresRate" Grid.Row="3" Visibility="Collapsed"
+                                                        IconPath="pack://SiteOfOrigin:,,,/Resource/Image/RefresRate.png"
+                                                        Index="16"
+                                                        Text="{DynamicResource RefresRate}"/>
+                            <controls:QuickMenuComboBox x:Name="ScaleRate" Grid.Row="3" Visibility="Collapsed"
+                                                        IconPath="pack://SiteOfOrigin:,,,/Resource/Image/RefresRate.png"
+                                                        Index="17"
+                                                        Text="{DynamicResource ScaleRate}"/>
+                            <Grid Grid.Row="4" Margin="0,0,0,0" Height="1" Background="#FF585858"/>
+                        </Grid>
+                        <Grid Grid.Row="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="8*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="2*"/>
+                            </Grid.RowDefinitions>
+                            <Viewbox Grid.Row="0" Margin="{Binding Path=TitleMargin, Mode=OneWay}"
+                                     HorizontalAlignment="Center">
+                                <TextBlock HorizontalAlignment="Left" 
+                                           VerticalAlignment="Center"
+                                           FontSize="24"
+                                           FontWeight="Black"
+                                           Foreground="White"
+                                           FontFamily="微软雅黑"
+                                           Text="{DynamicResource Audio}" />
+                            </Viewbox>
+                            <controls:QuickMenuSlider x:Name="Speaker" Grid.Row="1"
+                                                      IconPath="pack://SiteOfOrigin:,,,/Resource/Image/Speaker.png"
+                                                      MinValue="0"
+                                                      MaxValue="100"
+                                                      Index="11"
+                                                      Text="{DynamicResource Speaker}"/>
+                            <controls:QuickMenuSlider x:Name="Microphone" Grid.Row="2" Visibility="Collapsed"
+                                                      IconPath="pack://SiteOfOrigin:,,,/Resource/Image/MicroPhone.png"
+                                                      MinValue="0"
+                                                      MaxValue="100"
+                                                      Index="13"
+                                                      Text="{DynamicResource Microphone}"/>
+                        </Grid>
+                        <Grid Grid.Row="4">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*" />
+                                <RowDefinition Height="1*" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" x:Name="Tdp" Foreground="White" Text="" />
+                            <TextBlock Grid.Row="1" x:Name="Result" Foreground="White" Text="" />
+                        </Grid>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+        <Border Grid.Column="2" BorderBrush="#EEEEEE" BorderThickness="1" CornerRadius="20">
+            <Grid x:Name="GridButton">
+                <Border Background="#CC000000"
+                        CornerRadius="20">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25*"/>
+                            <RowDefinition Height="15*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="15*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="15*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="15*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="15*"/>
+                            <RowDefinition Height="25*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="10*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <controls:QuickMenuButton x:Name="TaskManager" Grid.Row="1" Grid.Column="1"
+                                                  ImagePath="pack://SiteOfOrigin:,,,/Resource/Image/TaskManager_Black.png"
+                                                  SelectedImagePath="pack://SiteOfOrigin:,,,/Resource/Image/TaskManager.png"
+                                                  ImageWidth="60"
+                                                  ImageHeight="60"
+                                                  Index="0"
+                                                  ImageCornerRadius="8"
+                                                  Text="{DynamicResource TaskManager}"/>
+                        <controls:QuickMenuButton x:Name="CutScreen" Grid.Row="3" Grid.Column="1"
+                                                  ImagePath="pack://SiteOfOrigin:,,,/Resource/Image/CutScreen_Black.png"
+                                                  SelectedImagePath="pack://SiteOfOrigin:,,,/Resource/Image/CutScreen.png"
+                                                  ImageWidth="60"
+                                                  ImageHeight="60"
+                                                  Index="1"
+                                                  ImageCornerRadius="8"
+                                                  Text="{DynamicResource CutScreen}"/>
+                        <controls:QuickMenuButton x:Name="ESC" Grid.Row="5" Grid.Column="1" Visibility="Collapsed"
+                                                  ImagePath="pack://SiteOfOrigin:,,,/Resource/Image/ESC_Black.png"
+                                                  SelectedImagePath="pack://SiteOfOrigin:,,,/Resource/Image/ESC.png"
+                                                  ImageWidth="60"
+                                                  ImageHeight="60"
+                                                  Index="2"
+                                                  ImageCornerRadius="8"
+                                                  Text="{DynamicResource ESC}"/>
+                        <controls:QuickMenuButton x:Name="Mute" Grid.Row="5" Grid.Column="1"
+                                                  ImagePath="pack://SiteOfOrigin:,,,/Resource/Image/Mute_Black.png"
+                                                  SelectedImagePath="pack://SiteOfOrigin:,,,/Resource/Image/Mute.png"
+                                                  ImageWidth="60"
+                                                  ImageHeight="60"
+                                                  Index="2"
+                                                  ImageCornerRadius="8"
+                                                  Text="{DynamicResource Mute}"/>
+                        <controls:QuickMenuButton x:Name="QuitGame" Grid.Row="9" Grid.Column="1" Visibility="Collapsed"
+                                                  ImagePath="pack://SiteOfOrigin:,,,/Resource/Image/QuitGame_Black.png"
+                                                  SelectedImagePath="pack://SiteOfOrigin:,,,/Resource/Image/QuitGame.png"
+                                                  ImageWidth="60"
+                                                  ImageHeight="60"
+                                                  Index="4"
+                                                  ImageCornerRadius="8"
+                                                  Text="{DynamicResource QuitGame}"/>
+                        <controls:QuickMenuButton x:Name="KeyDescription" Grid.Row="7" Grid.Column="1"
+                                                  ImagePath="pack://SiteOfOrigin:,,,/Resource/Image/KeyNote_Black.png"
+                                                  SelectedImagePath="pack://SiteOfOrigin:,,,/Resource/Image/KeyNote.png"
+                                                  ImageWidth="60"
+                                                  ImageHeight="60"
+                                                  Index="3"
+                                                  ImageCornerRadius="8"
+                                                  Text="{DynamicResource KeysDesc}"/>
+                        <controls:QuickMenuButton x:Name="ScreenKeyboard" Grid.Row="9" Grid.Column="1"
+                                                  ImagePath="pack://SiteOfOrigin:,,,/Resource/Image/ScreenKeyboard_Black.png"
+                                                  SelectedImagePath="pack://SiteOfOrigin:,,,/Resource/Image/ScreenKeyboard.png"
+                                                  ImageWidth="60"
+                                                  ImageHeight="60"
+                                                  Index="4"
+                                                  ImageCornerRadius="8"
+                                                  Text="{DynamicResource ScreenKeyboard}"/>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

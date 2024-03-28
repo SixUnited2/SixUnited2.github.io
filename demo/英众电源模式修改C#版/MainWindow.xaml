@@ -1,0 +1,17 @@
+﻿<Window x:Class="WmiPowerModeSwitcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Power Mode Switcher" Height="282" Width="400">
+	<StackPanel>
+		<ComboBox Name="powerModeComboBox" Width="200" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,10">
+			<ComboBoxItem Content="Balance mode" Tag="0x00"/>
+			<ComboBoxItem Content="Performance mode" Tag="0x01"/>
+			<ComboBoxItem Content="Quiet mode" Tag="0x02"/>
+			<ComboBoxItem Content="Super mode" Tag="0x03"/>
+		</ComboBox>
+		<Button Content="Set Mode" Width="100" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,0,0,10" Click="SetModeButton_Click"/>
+		<Button Content="Get Mode" Width="100" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,0,0,10" Click="GetModeButton_Click"/>
+		<TextBox Name="logTextBox" VerticalAlignment="Stretch" Margin="10,10,10,10" Height="100" VerticalScrollBarVisibility="Auto" IsReadOnly="True"/>
+	</StackPanel>
+
+</Window>
