@@ -79,7 +79,7 @@ namespace yz.gaming.accessoryapp.Utils
             {
                 //var response = await httpClient.GetAsync("https://gitlab.com/yzapp/taishan/-/raw/main/update/update.json?inline=false");
                 //var response = await httpClient.GetAsync("https://gitlab.com/sixunited1/GameAssistant/-/raw/tanjun/back_key/update/update.json?ref_type=heads&inline=false");
-                var response = await httpClient.GetAsync("https://gitlab.com/sixunited1/sixunited.gitlab.io/-/raw/main/update/update.json?ref_type=heads&inline=false");
+                var response = await httpClient.GetAsync("https://sixunited2.github.io/update/update.json");
                 byte[] responseData = await response.Content.ReadAsByteArrayAsync();
 
                 // 解码响应正文
