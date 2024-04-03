@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="yz.gaming.accessoryapp.Controls.WindowControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:yz.gaming.accessoryapp.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="200">
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <ContentPresenter />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <Button Background="Transparent" BorderThickness="0" Click="Mini_Click">
+                <Button.Content>
+                    <Image Width="28" Height="28" Source="pack://SiteOfOrigin:,,,/Resource/Image/Mini.png" />
+                </Button.Content>
+            </Button>
+            <Viewbox Width="35" />
+            <Button Background="Transparent" BorderThickness="0" Click="Exit_Click">
+                <Button.Content>
+                    <Image Width="28" Height="28" Source="pack://SiteOfOrigin:,,,/Resource/Image/Exit.png" />
+                </Button.Content>
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

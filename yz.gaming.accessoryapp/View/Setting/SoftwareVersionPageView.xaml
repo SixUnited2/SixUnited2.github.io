@@ -1,0 +1,138 @@
+﻿<Page x:Class="yz.gaming.accessoryapp.View.Setting.SoftwareVersionPageView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:yz.gaming.accessoryapp.View.Setting"
+      xmlns:controls="clr-namespace:yz.gaming.accessoryapp.Controls"
+      xmlns:converter="clr-namespace:yz.gaming.accessoryapp.Utils.Converter"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SoftwareVersionPageView">
+    <Page.Resources>
+        <ResourceDictionary>
+            <converter:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="White" BorderThickness="3" CornerRadius="10" Grid.Row="1" Grid.Column="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="11*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+
+                    <Viewbox Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,8,0,0">
+                        <TextBlock Text="{Binding CurrentVersion}" Foreground="White"/>
+                    </Viewbox>
+                    <Grid Grid.Row="1"/>
+                    <Grid Grid.Row="3">
+                        <TextBlock Text="{Binding CurrentLogs}"
+                           Margin="20,30,0,0"
+                           Foreground="White"
+                           TextWrapping="Wrap"
+                           FontSize="20"/>
+                    </Grid>
+                </Grid>
+            </Border>
+            <Border BorderBrush="White" BorderThickness="3" CornerRadius="10" Grid.Row="1" Grid.Column="3">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="11*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+
+                    <Viewbox Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,8,0,0">
+                        <TextBlock Text="{Binding NewVersion}" Foreground="White"/>
+                    </Viewbox>
+                    <Grid Grid.Row="1"/>
+                    <Grid Grid.Row="3">
+                        <TextBlock Text="{Binding NewLogs}"
+                           Margin="20,30,0,0"
+                           Foreground="White"
+                           TextWrapping="Wrap"
+                           FontSize="20"/>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <controls:ClickEffectGrid x:Name="Update" Grid.Column="2"
+                            Visibility="{Binding IsNewVersion, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}">
+                            <Border Background="#FF21A74F" CornerRadius="10">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="2*"/>
+                                        <RowDefinition Height="1*"/>
+                                    </Grid.RowDefinitions>
+                                    <Viewbox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <TextBlock x:Name="UpdateText"
+                                       Text="{StaticResource Update}"
+                                       Foreground="White" 
+                                       FontWeight="Bold"/>
+                                    </Viewbox>
+                                </Grid>
+                            </Border>
+                        </controls:ClickEffectGrid>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="2" Height="41" Margin="0,41,0,0" Grid.RowSpan="2" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+            <!--<controls:ClickEffectGrid x:Name="Update" Grid.Column="1"
+                                      Visibility="{Binding IsNewVersion, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}">
+                <Border Background="#FF21A74F" CornerRadius="10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Viewbox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock x:Name="UpdateText"
+                                       Text="{StaticResource Update}"
+                                       Foreground="White" 
+                                       FontWeight="Bold"/>
+                        </Viewbox>
+                    </Grid>
+                </Border>
+            </controls:ClickEffectGrid>-->
+        </Grid>
+    </Grid>
+</Page>

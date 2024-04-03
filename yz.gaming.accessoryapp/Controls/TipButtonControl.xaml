@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="yz.gaming.accessoryapp.Controls.TipButtonControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:yz.gaming.accessoryapp.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="200">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resource/ControlStyl.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Height="40" Width="auto">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <Button Width="40" Height="40" Style="{DynamicResource RoundButton}" Grid.Column="0"
+                Click="Button_Click">
+            <Button.Content>
+                <Image Source="{Binding IconPath}" Margin="8"></Image>
+            </Button.Content>
+        </Button>
+        <TextBlock Grid.Column="1" Margin="10,0,0,0" Text="{Binding Text}" Foreground="#80FFFFFF" FontSize="28" FontStyle="Normal"/>
+    </Grid>
+</UserControl>

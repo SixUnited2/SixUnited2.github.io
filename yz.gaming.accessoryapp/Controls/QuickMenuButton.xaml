@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="yz.gaming.accessoryapp.Controls.QuickMenuButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:yz.gaming.accessoryapp.Controls"
+             xmlns:converter="clr-namespace:yz.gaming.accessoryapp.Utils.Converter"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <converter:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Border  x:Name="MainBorder" CornerRadius="5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Viewbox Grid.Row="1" Grid.Column="1">
+                    <Grid Width="{Binding ImageWidth}"
+                          Height="{Binding ImageHeight}">
+                        <Border x:Name="ButtonBorder"
+                                CornerRadius="{Binding ImageCornerRadius}">
+                            <Grid>
+                                <Image x:Name="BackgroundImage"
+                                       Visibility="{Binding IsPressed, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=false}"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Source="{Binding ImagePath}"/>
+                                <Image x:Name="SelectedImage"
+                                       Visibility="{Binding IsPressed, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Source="{Binding SelectedImagePath}"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Viewbox>
+                <Viewbox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center">
+                    <TextBlock HorizontalAlignment="Center" 
+                               VerticalAlignment="Center"
+                               FontSize="12" FontWeight="Black"
+                               Foreground="White"
+                               FontFamily="微软雅黑"
+                               Text="{Binding Text}" />
+                </Viewbox>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "yz.gaming.accessoryapp": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
