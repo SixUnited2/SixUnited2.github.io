@@ -1,2 +1,0 @@
-#define YZGAMINGCOM_API __declspec(dllexport)
-#define YZGAMINGCOM_API __declspec(dllimport)
