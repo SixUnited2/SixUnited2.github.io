@@ -1,5 +1,5 @@
 {
-  "version": "1.0.21.1",
+  "version": "1.0.21.2",
   "logs": "Log：\r\n2024-4-3 Fixed some bugs.",
   "languages": [
     {
@@ -12,5 +12,5 @@
     }
   ],
   "sha256": "5c9a44fb78d5bb58edcdc3daee02c1fe1b6c82428b79143eb431bd4662ca441f",
-  "url": "https://sixunited2.github.io/update/GameAssistant_v1.0.21.1.zip"
+  "url": "https://sixunited2.github.io/update/GameAssistant_v1.0.21.2.zip"
 }
