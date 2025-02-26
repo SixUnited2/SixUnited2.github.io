@@ -1,16 +1,16 @@
 {
-  "version": "1.0.20.5",
-  "logs": "Log：\r\n2024-4-3 Fixed some bugs.",
+  "version": "1.0.21.1",
+  "logs": "Log：\r\n2025-2-26 Fixed some bugs.",
   "languages": [
     {
       "language": "zh-Hans",
-      "log": "日志：\r\n2024-4-3 修复一些BUG。"
+      "log": "日志：\r\n2025-2-26 修复一些BUG。"
     },
     {
       "language": "en-US",
-      "log": "Log：\r\n2024-4-3 Fixed some bugs."
+      "log": "Log：\r\n2025-2-26 Fixed some bugs."
     }
   ],
-  "sha256": "53d92be3f0ad5d709332b5ad54f2e03af9b86de9bb98de2140d0150bdbd2395e",
-  "url": "https://sixunited2.github.io/update/GameAssistant_v1.0.20.5.zip"
+  "sha256": "46795e68d9b41aea4b73a60de23427040165d859ea68544cbfd1dff4e5031d7f",
+  "url": "https://sixunited2.github.io/update/GameAssistant_v1.0.21.1.zip"
 }
